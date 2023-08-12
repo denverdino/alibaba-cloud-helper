@@ -1,5 +1,5 @@
 FROM alpine:latest
-RUN apk add --no-cache jq ca-certificates
+RUN apk add --no-cache jq ca-certificates git git-lfs
 # 注意：alpine需要额外创建 lib64 的动态链接库软连接
 RUN mkdir /lib64 && ln -s /lib/libc.musl-x86_64.so.1 /lib64/ld-linux-x86-64.so.2
 
