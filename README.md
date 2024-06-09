@@ -1,3 +1,8 @@
-# alibaba-cloud-helper
+# A set of helper container images
 
-A simple helper Docker Container for Alibaba Cloud CLI and OSSUtil
+
+## alibaba-cloud-helper
+A simple helper for Alibaba Cloud CLI and OSSUtil
+
+## model-downloader
+A simple helper for downloading models from Huggingface to cache
