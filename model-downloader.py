@@ -28,9 +28,12 @@ def copy_directory(src, dst):
                 print(f"Skipping existing file: {dst_path}")
 
 model_name = os.environ.get("MODEL_NAME")
-model = AutoModel.from_pretrained(model_name)
-tokenizer = AutoTokenizer.from_pretrained(model_name)
 
+print(f"Start to download model: {model_name} ...")
+model = AutoModel.from_pretrained(model_name)
+
+print(f"Start to download tokenizer: {model_name} ...")
+tokenizer = AutoTokenizer.from_pretrained(model_name)
 
 src_dir = os.environ.get("HF_HOME", "/root/.cache/huggingface")
 
@@ -41,7 +44,4 @@ print(f"Start to copy files from {src_dir} to {dst_dir} ...")
 copy_directory(src_dir, dst_dir)
 
 print(f"All files copied from {src_dir} to {dst_dir} successfully!")
-
-
-
 
